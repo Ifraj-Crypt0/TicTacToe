@@ -12,36 +12,44 @@
 
 <body class="flex flex-col justify-center items-center  h-screen bg-[#59594A]">
 
-   <form class="bg-[#DAD7CD] w-full max-w-md rounded-xl drop-shadow-lg h-screen flex justify-center ">
+    <form onsubmit="handleFormSubmit(event)"
 
-    <div class="flex items-center flex-col">
-        <h1 class="text-[#59594A] text-6xl lg:text-7xl">Tic-Tac-Toe</h1>
-        <small class="text-[#59594A]/70 text-sm ">by Ifraj Ahmed </small>
-    </div>
+        class="bg-[#DAD7CD] w-full max-w-md rounded-xl drop-shadow-lg h-screen flex justify-center ">
 
-    <div class="flex flex-col justify-center h-2/5  items-center text-xl ">
-        <label>Enter Name For Player X</label> <input class="border placeholder:text-center rounded-lg w-3/5" placeholder="Enter Your Name" type="text">
-        <label>Enter Name For Player 0</label> <input class="border placeholder:text-center rounded-lg w-3/5" placeholder="Enter Your Name" type="text">
-    </div>
+        <div class="flex items-center flex-col">
+            <h1 class="text-[#59594A] text-6xl lg:text-7xl">Tic-Tac-Toe</h1>
+            <small class="text-[#59594A]/70 text-sm ">by Ifraj Ahmed </small>
+        </div>
 
-    <div class="flex justify-center">
-        <button 
-    class="bg-[#59594A] text-[#DAD7CD] font-semibold px-6 py-3 rounded-xl drop-shadow-md 
+        <div class="flex flex-col justify-center h-2/5  items-center text-xl ">
+            <label>Enter Name For Player X</label> <input id="x"
+                class="border pl-2 placeholder:text-center rounded-lg w-3/5" placeholder="Drop your name, champ 🕹️"
+                type="text">
+            <label>Enter Name For Player 0</label> <input id="y"
+                class="border pl-2 placeholder:text-center rounded-lg w-3/5" placeholder="And who’s Player ⭕️ ?"
+                type="text">
+        </div>
+
+        <div id="alertMessage" class="flex justify-center px-2 my-4  hidden">
+            
+        </div>
+
+        <div class="flex justify-center">
+            <button type="submit" class="bg-[#59594A] text-[#DAD7CD] font-semibold px-6 py-3 rounded-xl drop-shadow-md 
            hover:bg-[#A3B18A] hover:text-[#3A3A2A] transition-all duration-300 ease-in-out 
-           active:scale-95 hover:cursor-pointer"
-  >
-    Start Game!
-  </button>
-    </div>
+           active:scale-95 hover:cursor-pointer">
+                Start Game!
+            </button>
+        </div>
 
-   </form>
+    </form>
 
     <main>
         <header>
 
         </header>
     </main>
-
+<script src="app.js"></script>
 </body>
 
 </html>
