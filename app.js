@@ -10,6 +10,8 @@ let x_stat = document.querySelector("#x_stat");
 let d_stat = document.querySelector("#d_stat");
 let o_stat = document.querySelector("#o_stat");
 
+
+
 let gameJS = false;
 
 
@@ -67,7 +69,7 @@ const handleFormSubmit = (e) => {
         d_stat.innerHTML = `<span class="font-bold capitalize text-lg">Draws</span><br>${countD}`;
         o_stat.innerHTML = `<span class="font-bold capitalize text-lg">${name_y} (O)</span><br>Victories: ${countO}`;
 
-        initGameLogic()
+        initGameLogic(name_x, name_y)
 
       }, 50);
     }, 2000);
@@ -86,30 +88,10 @@ const handleFormSubmit = (e) => {
 
 //GAME
 
-const gameBtn = document.querySelectorAll(".game-btn")
-const initGameLogic = () => {
-
-  let turnX = true;
-  gameBtn.forEach(btn => {
-    btn.addEventListener("click", () => {
-
-
-      if (btn.innerText !== "") return
-
-      if (turnX) {
-        btn.innerText = "X"
-      } else {
-        btn.innerText = "O"
-      }
-      turnX = !turnX;
-    })
-  })
-
-  console.log(gameBtn)
-}
+const gameBtn = document.querySelectorAll(".game-btn");
 
 let winningPatterns = [
-  
+
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -119,19 +101,81 @@ let winningPatterns = [
   [1, 4, 7],
   [2, 5, 8],
 
-  
+
   [0, 4, 8],
   [2, 4, 6]
 ];
 
-const checkWinner =()=>{
+const checkWinner = () => {
   for (const winningPattern of winningPatterns) {
-    for (const pattern of winningPattern) {
-      console.log(pattern)
+    const [a, b, c] = winningPattern
+    const valA = gameBtn[a].innerText;
+    const valB = gameBtn[b].innerText;
+    const valC = gameBtn[c].innerText;
+    console.log(a, b, c)
+    if (valA !== "" && valB === valA && valB === valC) {
+      return valA;
     }
+
   }
+  return null;
 }
-checkWinner()
+
+
+
+const initGameLogic = (playerX, playerY) => {
+
+  let turnX = true;
+
+  gameBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+
+      if (btn.innerText !== "") return
+
+      let showTurn = document.querySelector("#showTurn");
+      showTurn.innerText = "";
+      const p = document.createElement("p")
+      p.innerText = turnX
+        ? `${name_x}'s turn (X)`
+        : `${name_y}'s turn (O)`;
+      showTurn.append(p)
+
+      if (turnX) {
+        btn.innerText = "X"
+      } else {
+        btn.innerText = "O"
+      }
+      turnX = !turnX;
+      let winner = checkWinner();
+
+      if (winner.innerText === "X") {
+        x_wins++;
+        setTimeout(() => {
+          alert(`${playerX} wins`)
+        }, 500);
+      } else if (winner.innerText = "Y") {
+        y_wins++;
+        setTimeout(() => {
+          alert(`${playerY} wins`)
+        }, 500);
+      } else {
+        countD++;
+        setTimeout(() => {
+          alert(`Its a Draw`)
+        }, 500);
+      }
+
+    })
+
+  })
+
+  console.log(gameBtn)
+}
+
+
+
+
 
 const reset = () => {
   gameBtn.forEach(btn => {
