@@ -10,18 +10,17 @@
     <link rel="shortcut icon" href="/ticTacToe.png" type="image/x-icon">
 </head>
 
-<body class="flex flex-col justify-center items-center  h-screen bg-[#59594A]">
+<body class="flex flex-col justify-center items-center  h-screen bg-[#666646]">
 
     <form onsubmit="handleFormSubmit(event)"
-
-        class="bg-[#DAD7CD] w-full max-w-md rounded-xl drop-shadow-lg h-screen flex justify-center ">
+        class="bg-[#DAD7CD]  w-full max-w-md rounded-xl drop-shadow-lg h-screen flex justify-center transition-all ease-out duration-700">
 
         <div class="flex items-center flex-col">
             <h1 class="text-[#59594A] text-6xl lg:text-7xl">Tic-Tac-Toe</h1>
             <small class="text-[#59594A]/70 text-sm ">by Ifraj Ahmed </small>
         </div>
 
-        <div class="flex flex-col justify-center h-2/5  items-center text-xl ">
+        <div id="bug" class="flex flex-col justify-center h-2/5  items-center text-xl ">
             <label>Enter Name For Player X</label> <input id="x"
                 class="border pl-2 placeholder:text-center rounded-lg w-3/5" placeholder="Drop your name, champ 🕹️"
                 type="text">
@@ -30,7 +29,7 @@
                 type="text">
         </div>
 
-        <div id="alertMessage" class="flex justify-center px-2 my-4  hidden">
+        <div id="alertMessage" class="flex justify-center px-2 my-4 text-center  hidden">
             
         </div>
 
@@ -44,12 +43,14 @@
 
     </form>
 
-    <main>
+    <main id="game"
+        class="bg-[#DAD7CD]  w-full max-w-md rounded-xl drop-shadow-lg  flex justify-center hidden opacity-0 min-h-[100vh] transition-all duration-500 ease-in-out  ">
         <header>
-
+            
         </header>
     </main>
-<script src="app.js"></script>
+    <script src="form.js"></script>
+    <script src="game.js"></script>
 </body>
 
 </html>
