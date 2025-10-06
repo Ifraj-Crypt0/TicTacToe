@@ -10,6 +10,8 @@ let x_stat = document.querySelector("#x_stat");
 let d_stat = document.querySelector("#d_stat");
 let o_stat = document.querySelector("#o_stat");
 
+let gameJS = false;
+
 
 const successMsgs = [
   "Game on! The duel of legends is about to begin ⚔️",
@@ -41,7 +43,7 @@ const handleFormSubmit = (e) => {
     p.style.color = "#16a341"
     p.innerText = successMsgs[Math.floor(Math.random() * successMsgs.length)]
     alertBox.appendChild(p);
-
+    gameJS = true;
     //form animating out
     setTimeout(() => {
       form.classList.add("translate-y-[50px]", "opacity-0");
@@ -65,6 +67,7 @@ const handleFormSubmit = (e) => {
         d_stat.innerHTML = `<span class="font-bold capitalize text-lg">Draws</span><br>${countD}`;
         o_stat.innerHTML = `<span class="font-bold capitalize text-lg">${name_y} (O)</span><br>Victories: ${countO}`;
 
+        initGameLogic()
 
       }, 50);
     }, 2000);
@@ -83,3 +86,24 @@ const handleFormSubmit = (e) => {
 
 //GAME
 
+const initGameLogic = () => {
+  const gameBtn = document.querySelectorAll(".game-btn")
+
+  let turnX = true;
+  gameBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+
+      if (btn.innerText !== "") return
+
+      if (turnX) {
+        btn.innerText = "X"
+      } else {
+        btn.innerText = "O"
+      }
+      turnX=!turnX;
+    })
+  })
+
+  console.log(gameBtn)
+}
