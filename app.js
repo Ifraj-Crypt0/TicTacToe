@@ -150,12 +150,12 @@ const initGameLogic = (playerX, playerY) => {
       let winner = checkWinner();
 
       if (winner === "X") {
-        x_wins++;
+        // countX++;
         setTimeout(() => {
           alert(`${playerX} wins! 🎉`);
         }, 500);
       } else if (winner === "O") {
-        y_wins++;
+        // countO++;
         setTimeout(() => {
           alert(`${playerY} wins! 🎉`);
         }, 500);
@@ -163,7 +163,7 @@ const initGameLogic = (playerX, playerY) => {
         // Check if all cells are filled (for draw)
         const allFilled = [...gameBtn].every(btn => btn.innerText !== "");
         if (allFilled) {
-          countD++;
+          // countD++;
           setTimeout(() => {
             alert(`It's a draw 😅`);
           }, 500);
