@@ -61,17 +61,34 @@
         <section id="gameContainer" class="flex justify-center items-center h-screen">
             <div class="grid grid-cols-3 w-[480px] h-[480px]">
 
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-r border-saddle bg-[#DAD7CD]"></button>
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-r border-l border-saddle bg-[#DAD7CD]"></button>
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-l border-saddle bg-[#DAD7CD]"></button>
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-r border-t border-saddle bg-[#DAD7CD]"></button>
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border border-saddle bg-[#DAD7CD]"></button>
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-l border-t border-saddle bg-[#DAD7CD]"></button> 
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-t border-r border-saddle bg-[#DAD7CD]"></button>
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-t border-r border-l border-saddle bg-[#DAD7CD]"></button>
-                <button class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-t border-l border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-r border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-r border-l border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-l border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-r border-t border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-b border-l border-t border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-t border-r border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-t border-r border-l border-saddle bg-[#DAD7CD]"></button>
+                <button
+                    class="game-btn hover:cursor-pointer hover:bg-[#c1bdb1] border-t border-l border-saddle bg-[#DAD7CD]"></button>
             </div>
         </section>
+
+        <div class="w-full flex justify-center mt-6">
+            <button onclick="reset()" id="resetBtn" class="px-4 py-1 text-xs hover:cursor-pointer  font-semibold text-[#8B4513] border border-[#8B4513] 
+           hover:bg-[#8B4513]/10 active:scale-95 transition-all duration-200 
+           shadow-sm hover:shadow-md">
+                🔄 Reset
+            </button>
+        </div>
 
     </main>
     <script src="app.js"></script>

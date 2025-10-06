@@ -86,8 +86,8 @@ const handleFormSubmit = (e) => {
 
 //GAME
 
+const gameBtn = document.querySelectorAll(".game-btn")
 const initGameLogic = () => {
-  const gameBtn = document.querySelectorAll(".game-btn")
 
   let turnX = true;
   gameBtn.forEach(btn => {
@@ -101,9 +101,40 @@ const initGameLogic = () => {
       } else {
         btn.innerText = "O"
       }
-      turnX=!turnX;
+      turnX = !turnX;
     })
   })
 
   console.log(gameBtn)
+}
+
+let winningPatterns = [
+  
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+
+
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+
+  
+  [0, 4, 8],
+  [2, 4, 6]
+];
+
+const checkWinner =()=>{
+  for (const winningPattern of winningPatterns) {
+    for (const pattern of winningPattern) {
+      console.log(pattern)
+    }
+  }
+}
+checkWinner()
+
+const reset = () => {
+  gameBtn.forEach(btn => {
+    btn.innerText = "";
+  })
 }
