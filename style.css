@@ -31,3 +31,10 @@ form {
 #game{
     background-color: #c9dda7;
 }
+
+.gameBtn{
+    background-color: #DAD7CD;
+    border: 1px solid saddlebrown;
+    height: 150px;
+    row-gap: 50px;
+}

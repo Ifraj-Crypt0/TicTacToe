@@ -45,7 +45,7 @@
 
     <main id="game"
         class="bg-[#DAD7CD]  w-full max-w-md rounded-xl drop-shadow-lg  flex  hidden opacity-0 min-h-[100vh] transition-all duration-500 ease-in-out  flex-col ">
-        <header class="h-1/5 flex gap-4 items-center justify-center border-b border-white">
+        <header class="h-1/5 flex gap-4 items-center justify-center ">
             <div id="x_stat" class="box bg-[#EE6C4D] text-[#3A3A2A]">
 
             </div>
@@ -58,8 +58,23 @@
 
         </header>
 
-        <section class="h-screen" id="gamePlay">
+        <section id="gameContainer" class="flex justify-center items-center h-screen">
+            <div class="grid grid-cols-3 w-[480px] h-[480px]">
 
+                <button class="border-b border-r border-saddle bg-[#DAD7CD]"></button>
+                <button class="border-b border-r border-l border-saddle bg-[#DAD7CD]"></button>
+                <button class="border-b border-l border-saddle bg-[#DAD7CD]"></button>
+
+      
+                <button class="border-b border-r border-t border-saddle bg-[#DAD7CD]"></button>
+                <button class="border border-saddle bg-[#DAD7CD]"></button>
+                <button class="border-b border-l border-t border-saddle bg-[#DAD7CD]"></button>
+
+       
+                <button class="border-t border-r border-saddle bg-[#DAD7CD]"></button>
+                <button class="border-t border-r border-l border-saddle bg-[#DAD7CD]"></button>
+                <button class="border-t border-l border-saddle bg-[#DAD7CD]"></button>
+            </div>
         </section>
 
     </main>
