@@ -24,8 +24,9 @@ const handleFormSubmit = (e) => {
   e.preventDefault()
   let input_x = document.querySelector("#x").value;
   let input_y = document.querySelector("#y").value;
-  name_x = input_x;
-  name_y = input_y;
+  name_x=input_x;
+  name_y=input_y;
+ 
 
   alertBox.innerText = "";
 
@@ -64,6 +65,6 @@ const handleFormSubmit = (e) => {
     p.innerText = failMsgs[Math.floor(Math.random() * failMsgs.length)];
     alertBox.appendChild(p);
   }
-  console.log(`X is ${name_x} and Y is ${name_y}`)
+  // console.log(`X is ${name_x} and Y is ${name_y}`)
 
 }
