@@ -137,8 +137,8 @@ const initGameLogic = (playerX, playerY) => {
       showTurn.innerText = "";
       const p = document.createElement("p")
       p.innerText = turnX
-        ? `${name_x}'s turn (X)`
-        : `${name_y}'s turn (O)`;
+        ? `${name_y}'s turn (O)`
+        : `${name_x}'s turn (X)`;
       showTurn.append(p)
 
       if (turnX) {
