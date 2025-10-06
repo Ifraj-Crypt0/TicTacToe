@@ -12,29 +12,23 @@ form {
 .box {
     width: 100px;
     height: 100px;
-    
+
     border-radius: 12px;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
-    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
-    display: flex;     
-    flex-direction: column;      
-    justify-content: left; 
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
     align-items: center;
-    text-align: left;     
-    font-size: 12px;         
+    text-align: left;
+    font-size: 12px;
     text-wrap: wrap;
     overflow: scroll;
     /* font-weight: bold; */
 }
 
-#game{
+#game {
     background-color: #c9dda7;
 }
 
-.gameBtn{
-    background-color: #DAD7CD;
-    border: 1px solid saddlebrown;
-    height: 150px;
-    row-gap: 50px;
-}
